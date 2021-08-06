@@ -22,6 +22,7 @@ class ProjectsTable extends Migration
             $table->string("repo_url");
             $table->timestamp("date_started");
             $table->timestamp("date_finished");
+            $table->timestamp("last_updated");
             $table->timestamp("date_created");
             $table->timestamps();
         });

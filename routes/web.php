@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/projects", [ProjectsController::class, "getProjects"]);
+Route::prefix("projects")->group(function(){
+    Route::get("/", [ProjectsController::class, "get_projects"]);
+});
 
-Route::get("/project/{id}", [ProjectsController::class, "getProjectById"]);
+Route::prefix("project")->group(function(){
+
+    Route::get("/{id}", [ProjectsController::class, "get_project"]);
+});

@@ -20,5 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::prefix("project")->group(function(){
     Route::post("/",[ProjectsController::class, "create_project"]);
+
     Route::patch("/{id}", [ProjectsController::class, "update_project"]);
+    Route::delete("/{id}", [ProjectsController::class, "delete_project"]);
 });

@@ -83,7 +83,7 @@ class ProjectsServices
             'repo_url' => $update_project["repo_url"],
             "date_started" => $update_project["date_started"],
             'date_finished' => $update_project["date_finished"],
-            'last_updated' => $update_project["last_updated"],
+            'last_updated' => date("Y-m-d H:i:s"),
             "date_created" => $update_project["date_created"]
         ];
         $updated_project = DB::table("projects")->where("id", $id)->update($project);

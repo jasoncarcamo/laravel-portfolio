@@ -21,7 +21,7 @@ class ProjectsController extends Controller
         $project = $project_services->get_project_by_id($id);
 
         if(!$project){
-            return view("projects.project_notfound");
+            return view("projects.project_not_found");
         };
 
         return view("projects.project")->with("project", $project);
@@ -41,9 +41,7 @@ class ProjectsController extends Controller
 
         $created_project = $project_services->create_project($new_project);
 
-        return response([
-            "success" => $created_project
-        ], 200);
+        return view("projects.project_created")->with("created_project", $created_project);
     }
 
     public function update_project(Request $request, $id){
@@ -51,20 +49,27 @@ class ProjectsController extends Controller
         $project = $project_services->get_project_by_id($id);
 
         if(!$project){
-            return view("projects.project_notfound");
+            return view("projects.project_not_found");
         };
 
         $project = $project_services->set_props($request);
         $updated_project = $project_services->update_project($project, $id);
-
-        var_dump($updated_project);
         
-        return view("projects.project_created")->with("project", $project);
+        return view("projects.project_updated")->with("updated_project", $updated_project);
     }
 
     public function delete_project($id){
         $project_services = new ProjectsServices();
+        $project = $project_services->get_project_by_id($id);
 
+        if(!$project){
+            return view("projects.project_not_found");
+        };
         
+        $deleted_project = $project_services->delete_project($id);
+
+        if($deleted_project){
+            return view("projects.project_deleted")->with("deleted_project", $project[0]);
+        };
     }
 }

@@ -32,7 +32,6 @@ class ProjectsController extends Controller
         $new_project = $project_services->set_props($request);
 
         foreach($new_project as $project => $project_value){
-            print_r($project_value);
             if(!$project_value){
                 return response([
                     "bad" => "Missing $project"
@@ -40,21 +39,27 @@ class ProjectsController extends Controller
             };
         };
 
+        $created_project = $project_services->create_project($new_project);
+
         return response([
-            "success" => $new_project
+            "success" => $created_project
         ], 200);
     }
 
     public function update_project(Request $request, $id){
         $project_services = new ProjectsServices();
         $project = $project_services->get_project_by_id($id);
-        var_dump($project);
+
         if(!$project){
             return view("projects.project_notfound");
         };
-        $project = $project_services->set_props($request);
-        var_dump($project);
 
+        $project = $project_services->set_props($request);
+        $updated_project = $project_services->update_project($project, $id);
+
+        var_dump($updated_project);
+        
+        return view("projects.project_created")->with("project", $project);
     }
 
     public function delete_project($id){

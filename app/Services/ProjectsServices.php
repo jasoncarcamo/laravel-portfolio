@@ -29,6 +29,10 @@ class ProjectsServices
             "date_created" => $request->input("date_created")
         ];
 
+        if($request->input("id")){
+            $new_props["id"] = $request->input("id");
+        };
+
         $this->props = $new_props;
 
         return $this->props;
@@ -47,13 +51,46 @@ class ProjectsServices
     }
 
     public function create_project($new_project){
-        $created_project = DB::insert("insert into projects (title, description, images, live_url, repo_url, date_started, date_finished, last_updated, date_created) values (?, ?, ?, ?, ?, ?, ?, ?, ?);", [$new_project]);
+        $create_project = [
+            'title' => $new_project["title"],
+            'description' => $new_project["description"],
+            'images' => $new_project["images"],
+            'live_url' => $new_project["live_url"],
+            'repo_url' => $new_project["repo_url"],
+            "date_started" => $new_project["date_started"],
+            'date_finished' => $new_project["date_finished"],
+            'last_updated' => $new_project["last_updated"],
+            "date_created" => $new_project["date_created"]
+        ];
+        $created_project = DB::table("projects")->insertGetId($create_project);
+
+        if($created_project){
+            $create_project["id"] = $created_project;
+
+            return $create_project;
+        };
 
         return $created_project;
     }
 
     public function update_project($update_project, $id){
-        $updated_project = DB::update("update projects set title = ?, description = ?, images = ?, live_url = ?, repo_url = ?, date_started = ?, date_finished = ?, last_updated = ?, date_created = ? where id = ?",[$update_project, $id]);
+        $project = [
+            "id" => $id,
+            'title' => $update_project["title"],
+            'description' => $update_project["description"],
+            'images' => $update_project["images"],
+            'live_url' => $update_project["live_url"],
+            'repo_url' => $update_project["repo_url"],
+            "date_started" => $update_project["date_started"],
+            'date_finished' => $update_project["date_finished"],
+            'last_updated' => $update_project["last_updated"],
+            "date_created" => $update_project["date_created"]
+        ];
+        $updated_project = DB::table("projects")->where("id", $id)->update($project);
+
+        if($updated_project){
+            return $project;
+        };
 
         return $updated_project;
     }

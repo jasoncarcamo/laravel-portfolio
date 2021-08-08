@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #ffd500;
+        opacity: 0.06;
+        mix-blend-mode: screen;
+        isolation: isolate;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-0.206" y1="1.187" x2="1.361" y2="-0.276" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#49006d"/>
+      <stop offset="0.305" stop-color="#004e51"/>
+      <stop offset="1" stop-color="#970092"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1" data-name="Rectangle 1" class="cls-1" width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_23" data-name="Mask Group 23" class="cls-2">
+    <g id="Group_45" data-name="Group 45">
+      <g id="background_-_HOMEPAGE" data-name="background  - HOMEPAGE">
+        <rect id="Rectangle_1-2" data-name="Rectangle 1" class="cls-1" width="1920" height="1080"/>
+      </g>
+      <ellipse id="Ellipse_overlay_-_HOMEPAGE" data-name="Ellipse overlay  - HOMEPAGE" class="cls-3" cx="750.5" cy="759.5" rx="750.5" ry="759.5" transform="translate(494 -193)"/>
+    </g>
+  </g>
+</svg>

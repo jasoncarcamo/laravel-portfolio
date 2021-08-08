@@ -15,7 +15,11 @@ use App\Http\Controllers\ProjectsController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.landing_page');
+});
+
+Route::get("/about", function(){
+    return view("about.about");
 });
 
 Route::prefix("projects")->group(function(){

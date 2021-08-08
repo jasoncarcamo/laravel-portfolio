@@ -1,12 +1,26 @@
-<header>
-    <h1>Header</h1>
+@push("styles")
+    <link href="/css/layout/header.css" rel="stylesheet"/>
+@endpush
 
-    <ul>
-        <li>
+@push("scripts")
+    <script src="/js/layout/header.js" defer></script>
+@endpush
+@stack("scripts")
+
+@stack("styles")
+<header id="nav-header">
+    <button id="nav-burger" class="hamburger hamburger--collapse" type="button">
+        <div class="burger-line line-top"></div>
+        <div class="burger-line line-middle"></div>
+        <div class="burger-line line-bottom"></div>
+    </button>
+
+    <div id="nav-bar-container">
+        <nav id="nav-links">
             <a href="/">Home</a>
-        </li>
-        <li>
+            <a href="/about">About</a>
+            <a href="/technologies">Technologies</a>
             <a href="/projects">Projects</a>
-        </li>
-    </ul>
+        </nav>
+    </div>
 </header>

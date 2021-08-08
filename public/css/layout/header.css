@@ -1,0 +1,88 @@
+/*
+    Header section
+*/
+#nav-header{
+    position: fixed;
+    top:0;
+    left: -100%;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+    background-color: white;
+    transition: all 1s ease-in-out;
+}
+
+.nav-header{
+    text-align: center;
+}
+
+.show-header{
+    left: 0 !important;
+}
+
+#nav-burger{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 5rem;
+    z-index: 4;
+    width: 2.15rem;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transform: translate(-50%, -50%);
+}
+
+.burger-line{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.15rem;
+    height: .25rem;
+    background-color: black;
+    margin: .15em 0;
+    padding: 0;
+    transition: all .3s ease-in-out;
+}
+
+.line-middle{
+    width: 1.5rem !important;
+}
+
+.shrink-line{
+    width: 1.5rem !important;
+}
+
+.stretch-line{
+    width: 2.15rem !important;
+}
+
+#nav-bar-container{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-links a{
+    font-size: 1.25rem;
+    margin: 1.5rem auto;
+    color: black;
+    text-decoration: none  ;
+}

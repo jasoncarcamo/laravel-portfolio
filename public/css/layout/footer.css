@@ -1,0 +1,54 @@
+footer{
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translate(-50, 0);
+}
+
+.contact-icons{
+    display: flex;
+    width: 8em;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.contact-icons a{
+    margin: 0;
+    padding: 0;
+}
+
+.contact-icons a *{
+    font-size: 1.5em;
+}
+
+.contact-icons a:nth-child(1){
+    color: black !important;
+}
+
+.contact-icons a:nth-child(2){
+    color: #2867B2 !important;
+}
+
+.contact-icons a:nth-child(2) *{
+    height: .8em;
+    padding: -.5em 0 .1em 0;
+}
+
+.contact-icons a:nth-child(3){
+    color: rgb(26, 175, 138) !important;
+}
+
+button{
+    outline: none;
+    cursor: pointer;
+}
+
+input{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}

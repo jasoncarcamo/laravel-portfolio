@@ -15,11 +15,15 @@ use App\Http\Controllers\ProjectsController;
 */
 
 Route::get('/', function () {
-    return view('home.landing_page');
+    return view('home');
 });
 
 Route::get("/about", function(){
-    return view("about.about");
+    return view("about");
+});
+
+Route::get("/technologies", function(){
+    return view("technologies");
 });
 
 Route::prefix("projects")->group(function(){

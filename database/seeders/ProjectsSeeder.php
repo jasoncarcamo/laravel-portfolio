@@ -16,10 +16,11 @@ class ProjectsSeeder extends Seeder
     {
         DB::table('projects')->insert([
             "title" => "jhwebfjhewbhjfq",
+            "category" => "react_native",
             "description" => "nfwejfew",
             "images" => "bkwebfef",
-            "live_url" => "nkjknfj2",
-            "repo_url" => "kjbejfq2",
+            "live_url" => "https://jasoncarcamo.github.io/schoollayout",
+            "repo_url" => "https://github.com/jasoncarcamo/schoollayout",
             "date_started" => date("Y-m-d H:i:s"),
             "date_finished" => date("Y-m-d H:i:s"),
             "last_updated" => date("Y-m-d H:i:s"),
@@ -28,10 +29,11 @@ class ProjectsSeeder extends Seeder
 
         DB::table('projects')->insert([
             "title" => "jhweb",
+            "category" => "full_stack",
             "description" => "nfwejfew",
             "images" => "bkwebfef",
-            "live_url" => "nkjknfj2",
-            "repo_url" => "kjbejfq2",
+            "live_url" => "https://jasoncarcamo.github.io/schoollayout",
+            "repo_url" => "https://github.com/jasoncarcamo/schoollayout",
             "date_started" => date("Y-m-d H:i:s"),
             "date_finished" => date("Y-m-d H:i:s"),
             "last_updated" => date("Y-m-d H:i:s"),
@@ -40,10 +42,11 @@ class ProjectsSeeder extends Seeder
 
         DB::table('projects')->insert([
             "title" => "jhwebf",
+            "category" => "front_end",
             "description" => "nfwejfew",
             "images" => "bkwebfef",
-            "live_url" => "nkjknfj2",
-            "repo_url" => "kjbejfq2",
+            "live_url" => "https://jasoncarcamo.github.io/schoollayout",
+            "repo_url" => "khttps://github.com/jasoncarcamo/schoollayout",
             "date_started" => date("Y-m-d H:i:s"),
             "date_finished" => date("Y-m-d H:i:s"),
             "last_updated" => date("Y-m-d H:i:s"),

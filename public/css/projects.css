@@ -212,6 +212,70 @@
     display: none;
 }
 
+/*
+    create project widget button
+*/
+
+.widget-shadow{
+    position: fixed;
+    bottom: 7.75rem;
+    right: 4.95rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    border: .05rem solid black;
+    background: black;
+}
+
+#create-project-widget{
+    position: fixed;
+    bottom: 8rem;
+    right: 5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    border: .05rem solid black;
+    background-color: white;
+}
+
+#create-project-widget:hover{
+    animation: widget-shadow 1s ease-in-out;
+}
+
+@keyframes widget-shadow{
+    0%{
+        bottom: 8rem;
+    }
+
+    50%{
+        bottom: 9rem;
+    }
+
+    100%{
+        bottom: 8rem;
+    }
+}
+
+.widget-line-1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.25rem;
+    height: .60rem;
+    background-color: black;
+}
+
+.widget-line-2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 2.25rem;
+    height: .60rem;
+    background-color: black;
+}
+
 @media screen and (max-width: 1100px){
     main > section {
         height: auto;

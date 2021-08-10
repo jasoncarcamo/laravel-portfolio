@@ -31,6 +31,9 @@ Route::prefix("projects")->group(function(){
 });
 
 Route::prefix("project")->group(function(){
+    Route::get("/create", function(){
+        return view("projects.create_project");
+    });
 
     Route::get("/{id}", [ProjectsController::class, "get_project"]);
 });

@@ -39,5 +39,7 @@
                 @endif
             @endforeach
         </section>
+
+        @include("projects.create_project_widget")
     </section>
 @stop

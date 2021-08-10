@@ -42,13 +42,7 @@ function handleMenuBurger(){
     const navBurger = document.getElementById("nav-burger");
     
     navBurger.addEventListener("click", (e)=>{
-        if(!navHeader.classList.contains("show-header")){
-            console.log("removed")
-            navHeader.classList.add("show-header");
-        } else{
-            console.log("added")
-            navHeader.classList.remove("show-header");
-        };
+        navHeader.classList.toggle("show-header");
     });
 }
 
@@ -57,14 +51,12 @@ function handleBurgerHover(){
     const burgerLines = document.getElementsByClassName("burger-line");
 
     navBurger.addEventListener("mouseenter", (e)=>{
-        console.log("Hovering")
         burgerLines[0].classList.toggle("shrink-line");
         burgerLines[1].classList.toggle("stretch-line");
         burgerLines[2].classList.toggle("shrink-line");
     });
 
     navBurger.addEventListener("mouseleave", (e)=>{
-        console.log("Hovering")
         burgerLines[0].classList.toggle("shrink-line");
         burgerLines[1].classList.toggle("stretch-line");
         burgerLines[2].classList.toggle("shrink-line");

@@ -1,20 +1,16 @@
 #about-section{
     display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
-    margin: 0 ;
+    margin: 6rem auto;
     padding: 0 4em;
 }
 
 .about-image{
-    max-width: 50%;
+    max-width: 65%;
 }
 
 #about-summary-container{
-    padding: 10em 10%;
+    padding: 10em 1rem;
 }
 
 #about-summary-container h2{

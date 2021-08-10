@@ -218,7 +218,7 @@
 
 .widget-shadow{
     position: fixed;
-    bottom: 7.75rem;
+    bottom: 3.75rem;
     right: 4.95rem;
     width: 4rem;
     height: 4rem;
@@ -229,7 +229,7 @@
 
 #create-project-widget{
     position: fixed;
-    bottom: 8rem;
+    bottom: 4rem;
     right: 5rem;
     width: 4rem;
     height: 4rem;

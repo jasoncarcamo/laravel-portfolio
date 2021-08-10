@@ -23,7 +23,8 @@
 }
 
 .project > section{
-    padding: 2.22em 2.66em;
+    width: 30em;
+    padding: 2.22em 0;
 }
 
 .close-project{
@@ -222,16 +223,14 @@
 
     .project{
         flex-direction: column;
-        width: 100%;
+        width: 25rem;
         height: auto;
         margin: 0 auto;
         padding: 0;
-        border-top: none;
-        border-left: none;
-        border-right: none;
     }
 
     .project > section{
+        width: 25rem;
         padding: 2.22em 1em;
     }
 

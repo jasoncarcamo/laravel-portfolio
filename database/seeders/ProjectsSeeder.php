@@ -21,10 +21,11 @@ class ProjectsSeeder extends Seeder
             "images" => "bkwebfef",
             "live_url" => "https://jasoncarcamo.github.io/schoollayout",
             "repo_url" => "https://github.com/jasoncarcamo/schoollayout",
-            "date_started" => date("Y-m-d H:i:s"),
-            "date_finished" => date("Y-m-d H:i:s"),
-            "last_updated" => date("Y-m-d H:i:s"),
-            "date_created" => date("Y-m-d H:i:s")
+            "skills" => json_encode(["HTML", "JavaScript", "Css"]),
+            "date_started" => date("M-d-Y H:i:s"),
+            "date_finished" => date("M-d-Y H:i:s"),
+            "last_updated" => date("M-d-Y H:i:s"),
+            "date_created" => date("M-d-Y H:i:s")
         ]);
 
         DB::table('projects')->insert([
@@ -34,10 +35,11 @@ class ProjectsSeeder extends Seeder
             "images" => "bkwebfef",
             "live_url" => "https://jasoncarcamo.github.io/schoollayout",
             "repo_url" => "https://github.com/jasoncarcamo/schoollayout",
-            "date_started" => date("Y-m-d H:i:s"),
-            "date_finished" => date("Y-m-d H:i:s"),
-            "last_updated" => date("Y-m-d H:i:s"),
-            "date_created" => date("Y-m-d H:i:s")
+            "skills" => json_encode(["HTML", "JavaScript", "Css"]),
+            "date_started" => date("M-d-Y H:i:s"),
+            "date_finished" => date("M-d-Y H:i:s"),
+            "last_updated" => date("M-d-Y H:i:s"),
+            "date_created" => date("M-d-Y H:i:s")
         ]);
 
         DB::table('projects')->insert([
@@ -47,10 +49,11 @@ class ProjectsSeeder extends Seeder
             "images" => "bkwebfef",
             "live_url" => "https://jasoncarcamo.github.io/schoollayout",
             "repo_url" => "khttps://github.com/jasoncarcamo/schoollayout",
-            "date_started" => date("Y-m-d H:i:s"),
-            "date_finished" => date("Y-m-d H:i:s"),
-            "last_updated" => date("Y-m-d H:i:s"),
-            "date_created" => date("Y-m-d H:i:s")
+            "skills" => json_encode(["HTML", "JavaScript", "Css"]),
+            "date_started" => date("M-d-Y H:i:s"),
+            "date_finished" => date("M-d-Y H:i:s"),
+            "last_updated" => date("M-d-Y H:i:s"),
+            "date_created" => date("M-d-Y H:i:s")
         ]);
     }
 }

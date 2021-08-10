@@ -17,7 +17,13 @@
 
             <div class="author-info">
                 <p>Jason C.</p>
-                <p>{{date($project->date_started)}} <span class='date-separator'></span> {{date($project->date_finished)}}</p>
+
+                @php
+                    $date_started = date_parse($project->date_started);
+                    $date_finished = date_parse($project->date_finished);
+
+                    echo "<p>$date_started[month]/$date_started[day]/$date_started[year]<span class='date-separator'></span> $date_finished[month]/$date_finished[day]/$date_finished[year]</p>";
+                @endphp
             </div>
 
             <div class="author-options">
@@ -40,7 +46,11 @@
 
             <p><strong>Tech Stack:</strong></p>
             <ul>
-                ${frontendProjects[i]["Built with"]}
+                @foreach(json_decode($project->skills) as $skill)
+                    <li>
+                        {{$skill}}
+                    </li>
+                @endforeach
             </ul>
         </div>
     </section>

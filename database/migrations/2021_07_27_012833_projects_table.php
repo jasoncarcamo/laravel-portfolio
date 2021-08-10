@@ -21,6 +21,7 @@ class ProjectsTable extends Migration
             $table->string("images");
             $table->string("live_url");
             $table->string("repo_url");
+            $table->json("skills");
             $table->timestamp("date_started")->nullable();
             $table->timestamp("date_finished")->nullable();
             $table->timestamp("last_updated")->nullable();

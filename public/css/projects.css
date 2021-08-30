@@ -244,15 +244,15 @@
 
 @keyframes widget-shadow{
     0%{
-        bottom: 8rem;
+        bottom: 4rem;
     }
 
     50%{
-        bottom: 9rem;
+        bottom: 5rem;
     }
 
     100%{
-        bottom: 8rem;
+        bottom: 4rem;
     }
 }
 

@@ -37,6 +37,11 @@
     padding: 0;
 }
 
+.create-project-input-container > div{
+    display: flex;
+    flex-direction: row;
+}
+
 .create-project-label-header{
     width: 20rem;
     font-size: 1.5rem;

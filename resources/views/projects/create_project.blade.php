@@ -32,7 +32,7 @@
 
                 <div class="create-project-input-container">
                     <label id="" class="create-project-label" for="">Images</label>
-                    <input id="" class="create-project-input" type="text"/>
+                    <input id="" class="create-project-input" type="file"/>
                 </div>
 
                 <div class="create-project-input-container">
